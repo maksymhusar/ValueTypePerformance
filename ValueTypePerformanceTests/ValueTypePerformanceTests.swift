@@ -111,7 +111,7 @@ class ValueTypePerformanceTests: XCTestCase {
         print(res)
     }
     
-    // ======= Calculation Methods ======
+    // ======= Calculation Methods (No copying here. Compiler optimizations) ======
     @inline(never) func calculate(_ value: IntStruct) -> Int {
         return value.i ^ 0x746f
     }
